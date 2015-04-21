@@ -1,0 +1,7 @@
+name: weutil
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/wedge-eeprom/files/utils && make
+install-commands:
+- install -d $DESTDIR/usr/bin
+- install -m 0755 meta-facebook/meta-wedge/recipes-wedge/wedge-eeprom/files/utils/weutil $DESTDIR/usr/bin/weutil

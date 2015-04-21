@@ -1,0 +1,8 @@
+name: bitbang
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/bitbang/files/src && make
+install-commands:
+- install -d $DESTDIR/usr/bin
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/bitbang/files/src/spi-bb $DESTDIR/usr/bin/spi-bb
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/bitbang/files/src/mdio-bb $DESTDIR/usr/bin/mdio-bb
