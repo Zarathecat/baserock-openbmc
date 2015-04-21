@@ -1,0 +1,107 @@
+name: openbmc
+kind: stratum
+description: OpenBMC components
+build-depends:
+- morph: strata/build-essential.morph
+- morph: strata/core.morph
+chunks:
+- name: alert_control
+  morph: strata/openbmc/alert_control.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetrify-ref: master
+  build-depends: []
+- name: ipmi
+  morph: strata/openbmc/ipmi.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetrify-ref: master
+  build-depends: []
+- name: po-eeprom
+  morph: strata/openbmc/po-eeprom.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetrify-ref: master
+  build-depends: []
+- name: fbutils
+  morph: strata/openbmc/fbutils.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetrify-ref: master
+- name: bitbang
+  morph: strata/openbmc/bitbang.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+- name: libwedge-eeprom
+  morph: strata/openbmc/libwedge-eeprom.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+- name: weutil
+  morph: strata/openbmc/weutil.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+  - libwedge-eeprom
+- name: fan-ctrl
+  morph: strata/openbmc/fan-ctrl.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+  - libwedge-eeprom
+  - weutil
+- name: ipmid
+  morph: strata/openbmc/ipmid.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+  - libwedge-eeprom
+  - weutil
+- name: sms-kcsd
+  morph: strata/openbmc/sms-kcsd.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - ipmi
+  - alert_control
+- name: oob-nic
+  morph: strata/openbmc/oob-nic.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+  - libwedge-eeprom
+  - weutil
+- name: sensor-setup
+  morph: strata/openbmc/sensor-setup.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+- name: usb-console
+  morph: strata/openbmc/usb-console.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+- name: rest-api
+  morph: strata/openbmc/rest-api.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+- name: lm_sensors
+  morph: strata/openbmc/lm_sensors.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
