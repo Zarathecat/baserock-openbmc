@@ -1,0 +1,6 @@
+name: alert_control
+kind: chunk
+build commands:
+- cd /src/workspace/openbmc/meta-facebook/meta-wedge/recipes-wedge/fblibs/files/alert_control && make -f Makefile
+install commands:
+- make DESTDIR="$DESTDIR" install
