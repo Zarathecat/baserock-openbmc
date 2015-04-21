@@ -3,4 +3,10 @@ kind: stratum
 description: OpenBMC components
 build-depends:
 - morph: strata/fblibs.morph
-chunks:[]
+chunks:
+- name: po-eeprom
+  morph: strata/openbmc/po-eeprom.morph
+  repo: file:///src/workspace/openbmc
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetrify-ref: master
+  build-depends: []
