@@ -1,7 +1,0 @@
-name: po-eeprom
-kind: chunk
-build commands:
-- cd /src/workspace/openbmc/meta-facebook/meta-wedge/recipes-wedge/po-eeprom/files && make -f Makefile
-install commands:
-- make DESTDIR="$DESTDIR" install
-- exit 1
