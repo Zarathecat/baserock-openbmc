@@ -1,0 +1,5 @@
+name: fan-ctrl
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/fan-ctrl/fan-ctrl && make -f Makefile
+install-commands:
