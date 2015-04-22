@@ -1,0 +1,5 @@
+name: ipmid
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/ipmid/files && make -f Makefile
+install-commands:
