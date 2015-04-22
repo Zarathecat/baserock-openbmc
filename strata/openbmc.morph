@@ -23,3 +23,9 @@ chunks:
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
   build-depends: []
+- name: bitbang
+  morph: strata/openbmc/bitbang.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends: []
