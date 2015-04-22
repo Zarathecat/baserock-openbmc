@@ -1,0 +1,5 @@
+name: sms-kcsd
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/sms-kcsd/sms-kcsd && make -f Makefile
+install-commands:
