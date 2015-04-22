@@ -51,3 +51,13 @@ chunks:
   build-depends:
   - fbutils
   - libwedge-eeprom
+- name: fan-ctrl
+  morph: strata/openbmc/fan-ctrl.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
+  build-depends:
+  - fbutils
+  - libwedge-eeprom
+  - weutil
+
