@@ -1,0 +1,10 @@
+name: fbutils
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/fbutils/files/
+install-commands:
+- dst="$DESTDIR/usr/local/fbpackages/utils"
+- install -d $dst
+- install -m 644 ast-functions $dst/ast-functions
+- localbindir="$DESTDIR/usr/local/bin"
+- install -d ${localbindir}
