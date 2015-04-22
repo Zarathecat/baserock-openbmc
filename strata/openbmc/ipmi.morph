@@ -3,4 +3,7 @@ kind: chunk
 build-commands:
 - cd meta-facebook/meta-wedge/recipes-wedge/fblibs/files/ipmi && make -f Makefile
 install-commands:
-- make DESTDIR="$DESTDIR" install
+- install -d $DESTDIR/usr/lib
+- install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fblibs/files/ipmi/libipmi.so $DESTDIR/usr/lib/libipmi.so
+- install -d $DESTDIR/usr/include/facebook
+- install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fblibs/files/ipmi/ipmi.h $DESTDIR/usr/include/facebook/alert_control.h
