@@ -1,7 +1,7 @@
 name: ipmi
 kind: chunk
 build-commands:
-- cd meta-facebook/meta-wedge/recipes-wedge/fblibs/files/ipmi && make -f Makefile
+- cd meta-facebook/meta-wedge/recipes-wedge/fblibs/files/ipmi && make
 install-commands:
 - install -d $DESTDIR/usr/lib
 - install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fblibs/files/ipmi/libipmi.so $DESTDIR/usr/lib/libipmi.so
