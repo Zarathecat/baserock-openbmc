@@ -12,7 +12,31 @@ install-commands:
 - install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/src/include/log.h $DESTDIR/usr/include/facebook/log.h
 - install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/src/include/i2c-dev.h $DESTDIR/usr/include/facebook/i2c-dev.h
 
+# init
+- install -d $DESTDIR/etc/init.d
+- install -d $DESTDIR/etc/rcS.d
+# script to mount /mnt/data if SD card exists
+- install -m 0755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/mount_data0.sh $DESTDIR/etc/init.d/mount_data0.sh
+# TODO: update-rc.d goes here
+- install -m 0755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/rc.early $DESTDIR/etc/init.d/rc.early
+# TODO: update-rc.d goes here
+- install -m 0755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/setup-gpio.sh $DESTDIR/etc/init.d/setup-gpio.sh
+# TODO: update-rc.d goes here
+# create VLAN intf automatically
+- install -d $DESTDIR/etc/network/if-up.d
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/create_vlan_intf $DESTDIR/etc/network/if-up.d/create_vlan_intf
+# networking is done after rcS
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/eth0_mac_fixup.sh $DESTDIR/etc/init.d/eth0_mac_fixup.sh
+# TODO: update-rc.d goes here
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/power-on.sh $DESTDIR/etc/init.d/power-on.sh
+# TODO: update-rc.d goes here
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/fcswitcher.sh $DESTDIR/etc/init.d/fcswitcher.sh
+# TODO: update-rc.d goes here
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/fbutils/files/rc.local $DESTDIR/etc/init.d/rc.local
+# TODO: update-rc.d goes here
+
+
 # TODO: After this, the fbutils_0.1.bb script modifies the init files.
-# This needs translating from systemd
+# This needs translating to systemd
 # TODO: there are a lot of repeated variables above which would be
 # better stored once (for readability if nothing else)
