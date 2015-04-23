@@ -1,5 +1,5 @@
 name: oob-nic
 kind: chunk
 build-commands:
-- cd meta-facebook/meta-wedge/recipes-wedge/oob-nic/oob-nic/src && make -f Makefile
+- cd meta-facebook/meta-wedge/recipes-wedge/oob-nic/oob-nic/src && make
 install-commands:
