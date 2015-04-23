@@ -1,7 +1,7 @@
 name: po-eeprom
 kind: chunk
 build-commands:
-- cd meta-facebook/meta-wedge/recipes-wedge/po-eeprom/files && make -f Makefile
+- cd meta-facebook/meta-wedge/recipes-wedge/po-eeprom/files && make
 install-commands:
 - install -d $DESTDIR/usr/bin
 - install -m 0755 meta-facebook/meta-wedge/recipes-wedge/po-eeprom/files/po-eeprom $DESTDIR/usr/bin/po-eeprom
