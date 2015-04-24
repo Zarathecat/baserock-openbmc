@@ -1,0 +1,11 @@
+name: rackmon
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/rackmon/rackmon && make
+install-commands:
+- install -d $DESTDIR/usr/local/fbpackages/rackmon
+- install -d $DESTDIR/usr/local/bin
+- binfiles="modbuscmd modbussim gpiowatch"
+- for f in ${binfiles}; do install -m 755 meta-facebook/meta-wedge/recipes-wedge/rackmon/rackmon/$f $DESTDIR/usr/local/fbpackages/rackmon/$f
+- ln -snf $DESTDIR/usr/local/fbpackages/rackmon/$f $DESTDIR/usr/local/bin/$f
+#TODO: This currently won't work because makefile in fb source relies on old compiler. We need to upstream makefile that uses non-deprecated stuff, or point, in the stratum, to a patched makefile that we host-- but fb's licensing needs clarifying first.
