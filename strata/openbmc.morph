@@ -96,3 +96,8 @@ chunks:
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
+- name: rest-api
+  morph: strata/openbmc/rest-api.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetriy-ref: master
