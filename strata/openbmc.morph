@@ -125,3 +125,8 @@ chunks:
   repo: upstream:bottle
   ref: ac2170b9b49b4e27b2e2fb6c05880b7a453c60cb
   unpetrify-ref: 0.12.7
+- name: iproute2
+  morph: strata/networking-utils/iproute2.morph
+  repo: upstream:iproute2
+  ref: dc9282db9372021b58793c27235251fc69c62ea0
+  unpetrify-ref: 3.5.1
