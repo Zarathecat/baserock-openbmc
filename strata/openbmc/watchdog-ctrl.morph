@@ -1,0 +1,6 @@
+name: watchdog-ctrl
+kind: chunk
+install-commands:
+- install -d $DESTDIR/usr/local/fbpackages/watchdog_ctrl
+- install -d $DESTDIR/usr/local/bin
+- install -m 755 common/recipes-core/watchdog-ctrl/watchdog-ctrl/watchdog_ctrl.sh $DESTDIR/usr/local/fbpackages/watchdog_ctrl/watchdog_ctrl.sh && ln -s $DESTDIR/usr/local/fbpackages/watchdog_ctrl/watchdog_ctrl.sh $DESTDIR/usr/local/bin/watchdog_ctrl.sh
