@@ -121,3 +121,7 @@ chunks:
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
+- name: bottle
+  repo: upstream:bottle
+  ref: ac2170b9b49b4e27b2e2fb6c05880b7a453c60cb
+  unpetrify-ref: 0.12.7
