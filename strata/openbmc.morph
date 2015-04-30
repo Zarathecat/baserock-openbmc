@@ -111,3 +111,8 @@ chunks:
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
+- name: i2c-tools
+  morph: strata/openbmc/i2c-tools.morph
+  repo: upstream:i2c-tools
+  ref: a6f22e973ff0be73ed2a9aaa73c89457de97be1e
+  unpetrify-ref: 3.1
