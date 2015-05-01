@@ -130,3 +130,8 @@ chunks:
   repo: upstream:iproute2
   ref: dc9282db9372021b58793c27235251fc69c62ea0
   unpetrify-ref: 3.5.1
+- name: lm_sensors-full
+  morph: strata/openbmc/lm_sensors-full.morph
+  repo: upstream:lm-sensors
+  ref: d9983967a89382f64c65db67026f85f073ef9b74
+  unpetrify-ref: master
