@@ -135,3 +135,8 @@ chunks:
   repo: upstream:lm-sensors
   ref: d9983967a89382f64c65db67026f85f073ef9b74
   unpetrify-ref: master
+- name: isc-dhcp
+  repo: upstream:isc-dhcp
+  morph: strata/openbmc/isc-dhcp.morph
+  ref: 1b245c913a93296cd6924d81cf7f876f874b080c
+  unpetrify-ref: master
