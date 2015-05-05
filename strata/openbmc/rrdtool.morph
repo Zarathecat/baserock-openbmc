@@ -1,0 +1,6 @@
+name: rrdtool
+kind: chunk
+build-commands:
+- ./configure && make
+install-commands:
+- make install
