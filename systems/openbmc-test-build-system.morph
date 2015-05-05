@@ -39,6 +39,8 @@ strata:
   morph: strata/devtools.morph
 - name: bsp-x86_both-tools
   morph: strata/bsp-x86_both-tools.morph
+- name: ntpd
+  morph: strata/ntpd.morph
 configuration-extensions:
 - set-hostname
 - add-config-files
