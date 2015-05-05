@@ -4,6 +4,7 @@ description: OpenBMC components
 build-depends:
 - morph: strata/build-essential.morph
 - morph: strata/core.morph
+- morph: strata/pcre-utils.morph
 chunks:
 - name: alert_control
   morph: strata/openbmc/alert_control.morph
@@ -130,8 +131,51 @@ chunks:
   repo: upstream:iproute2
   ref: dc9282db9372021b58793c27235251fc69c62ea0
   unpetrify-ref: 3.5.1
+- name: libpng
+  repo: upstream:libpng
+  ref: 88dd30b232362b65cca374dda39096888163dd6b
+  unpetrify-ref: libpng-1.6.16-signed
+- name: pixman
+  morph: strata/graphics-common/pixman.morph
+  repo: upstream:pixman
+  ref: 87eea99e443b389c978cf37efc52788bf03a0ee0
+  unpetrify-ref: pixman-0.32.6
+- name: freetype2
+  repo: upstream:freetype2
+  ref: ec8853cd18e1a0c275372769bdad37a79550ed66
+  unpetrify-ref: VER-2-5-3
+- name: fontconfig
+  repo: upstream:fontconfig
+  ref: 9260b7ec39c34ce68d74e16d47917290a8c3f35a
+  unpetrify-ref: 2.11.1
+  build-depends:
+  - freetype2
+- name: cairo
+  repo: upstream:cairo
+  ref: 93422b3cb5e0ef8104b8194c8873124ce2f5ea2d
+  unpetrify-ref: 1.14.2
+  build-depends:
+  - fontconfig
+  - freetype2
+  - pixman
+  - libpng
+- name: pango
+  repo: upstream:pango
+  ref: 4bb53008211473574a44a52630c70a8f9992e264
+  unpetrify-ref: 1.28.4
+  build-depends:
+  - cairo
+- name: rrdtool
+  morph: strata/openbmc/rrdtool.morph
+  repo: https://github.com/oetiker/rrdtool-1.x.git
+  ref: 7227743cbdaa908f521a7b1512fd94d18068e53f
+  unpetrify-ref: master
+  build-depends:
+  - pango
 - name: lm_sensors-full
   morph: strata/openbmc/lm_sensors-full.morph
   repo: upstream:lm-sensors
   ref: d9983967a89382f64c65db67026f85f073ef9b74
   unpetrify-ref: master
+  build-depends:
+  - rrdtool
