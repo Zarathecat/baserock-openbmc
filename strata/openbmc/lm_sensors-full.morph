@@ -1,9 +1,9 @@
 name: lm_sensors-full
 kind: chunk
 build-commands:
-- make user PROG_EXTRA="sensors"
+- make user PROG_EXTRA="sensors sensord"
 install-commands:
 - make install PREFIX=${DESTDIR}/usr ETCDIR=${DESTDIR}/etc
 # TODO: find out if we need sensord stuff, if so we need rrdtool as a dependency
-#- install -m 0755 prog/sensord/sensord $DESTDIR/usr/sbin
-#- install -m 0644 prog/sensord/sensord.8 $DESTDIR/usr/share/man${mandir}/man8
+- install -m 0755 prog/sensord/sensord $DESTDIR/usr/sbin
+- install -m 0644 prog/sensord/sensord.8 $DESTDIR/usr/share/man${mandir}/man8
