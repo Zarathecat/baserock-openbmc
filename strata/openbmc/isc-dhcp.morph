@@ -1,0 +1,4 @@
+name: isc-dhcp
+kind: chunk
+configure-commands:
+- PREFIX=${DESTDIR}/usr
