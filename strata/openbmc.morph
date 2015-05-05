@@ -10,25 +10,21 @@ chunks:
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
-  build-depends: []
 - name: ipmi
   morph: strata/openbmc/ipmi.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
-  build-depends: []
 - name: po-eeprom
   morph: strata/openbmc/po-eeprom.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
-  build-depends: []
 - name: fbutils
   morph: strata/openbmc/fbutils.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
-  build-depends: []
 - name: bitbang
   morph: strata/openbmc/bitbang.morph
   repo: https://github.com/facebook/openbmc.git
