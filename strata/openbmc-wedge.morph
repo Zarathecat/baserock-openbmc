@@ -4,44 +4,44 @@ description: wedge components
 build-depends:
 - morph: strata/build-essential.morph
 - morph: strata/core.morph
-- morph: strata/openbmc.morph
+- morph: strata/openbmc-wedge.morph
 chunks:
 - name: alert_control
-  morph: strata/openbmc/alert_control.morph
+  morph: strata/openbmc-wedge/alert_control.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
 - name: ipmi
-  morph: strata/openbmc/ipmi.morph
+  morph: strata/openbmc-wedge/ipmi.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
 - name: po-eeprom
-  morph: strata/openbmc/po-eeprom.morph
+  morph: strata/openbmc-wedge/po-eeprom.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
 - name: fbutils
-  morph: strata/openbmc/fbutils.morph
+  morph: strata/openbmc-wedge/fbutils.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetrify-ref: master
 - name: bitbang
-  morph: strata/openbmc/bitbang.morph
+  morph: strata/openbmc-wedge/bitbang.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
   build-depends:
   - fbutils
 - name: libwedge-eeprom
-  morph: strata/openbmc/libwedge-eeprom.morph
+  morph: strata/openbmc-wedge/libwedge-eeprom.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
   build-depends:
   - fbutils
 - name: weutil
-  morph: strata/openbmc/weutil.morph
+  morph: strata/openbmc-wedge/weutil.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
@@ -49,7 +49,7 @@ chunks:
   - fbutils
   - libwedge-eeprom
 - name: fan-ctrl
-  morph: strata/openbmc/fan-ctrl.morph
+  morph: strata/openbmc-wedge/fan-ctrl.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
@@ -58,7 +58,7 @@ chunks:
   - libwedge-eeprom
   - weutil
 - name: ipmid
-  morph: strata/openbmc/ipmid.morph
+  morph: strata/openbmc-wedge/ipmid.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
@@ -67,7 +67,7 @@ chunks:
   - libwedge-eeprom
   - weutil
 - name: sms-kcsd
-  morph: strata/openbmc/sms-kcsd.morph
+  morph: strata/openbmc-wedge/sms-kcsd.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
@@ -75,7 +75,7 @@ chunks:
   - ipmi
   - alert_control
 - name: oob-nic
-  morph: strata/openbmc/oob-nic.morph
+  morph: strata/openbmc-wedge/oob-nic.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
@@ -84,27 +84,27 @@ chunks:
   - libwedge-eeprom
   - weutil
 - name: sensor-setup
-  morph: strata/openbmc/sensor-setup.morph
+  morph: strata/openbmc-wedge/sensor-setup.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
 - name: usb-console
-  morph: strata/openbmc/usb-console.morph
+  morph: strata/openbmc-wedge/usb-console.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
 - name: rest-api
-  morph: strata/openbmc/rest-api.morph
+  morph: strata/openbmc-wedge/rest-api.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
 - name: lm_sensors-wedge
-  morph: strata/openbmc/lm_sensors-wedge.morph
+  morph: strata/openbmc-wedge/lm_sensors-wedge.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master
 - name: rackmon
-  morph: strata/openbmc/rackmon.morph
+  morph: strata/openbmc-wedge/rackmon.morph
   repo: https://github.com/facebook/openbmc.git
   ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
   unpetriy-ref: master

@@ -1,7 +1,0 @@
-name: sensor-setup
-kind: chunk
-install-commands:
-- install -d $DESTDIR/etc/init.d
-- install -d $DESTDIR/etc/rcS.d
-- install -m 755 meta-facebook/meta-wedge/recipes-wedge/sensor-setup/files/sensor-setup.sh $DESTDIR/etc/init.d/sensor-setup.sh
-#TODO: update-rc.d goes here
