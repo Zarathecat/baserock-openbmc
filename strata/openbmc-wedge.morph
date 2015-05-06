@@ -4,7 +4,6 @@ description: wedge components
 build-depends:
 - morph: strata/build-essential.morph
 - morph: strata/core.morph
-- morph: strata/openbmc-wedge.morph
 chunks:
 - name: alert_control
   morph: strata/openbmc-wedge/alert_control.morph
