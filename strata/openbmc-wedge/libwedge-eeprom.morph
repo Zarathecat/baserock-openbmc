@@ -1,0 +1,9 @@
+name: libwedge-eeprom
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/wedge-eeprom/files/lib && make
+install-commands:
+- install -d $DESTDIR/usr/lib
+- install -m 0644 meta-facebook/meta-wedge/recipes-wedge/wedge-eeprom/files/lib/libwedge_eeprom.so $DESTDIR/usr/lib/libwedge_eeprom.so
+- install -d $DESTDIR/usr/include/facebook
+- install -m 0644 meta-facebook/meta-wedge/recipes-wedge/wedge-eeprom/files/lib/wedge_eeprom.h $DESTDIR/usr/include/facebook/wedge_eeprom.h
