@@ -17,6 +17,8 @@ strata:
   morph: strata/tools.morph
 - name: openbmc
   morph: strata/openbmc.morph
+- name: openbmc-wedge
+  morph: strata/openbmc-wedge.morph
 - name: python-cliapp
   morph: strata/python-cliapp.morph
 - name: python-wsgi
