@@ -1,0 +1,36 @@
+name: openbmc
+kind: stratum
+description: OpenBMC components
+build-depends:
+- morph: strata/build-essential.morph
+- morph: strata/core.morph
+chunks:
+- name: i2c-tools
+  morph: strata/openbmc/i2c-tools.morph
+  repo: upstream:i2c-tools
+  ref: a6f22e973ff0be73ed2a9aaa73c89457de97be1e
+  unpetrify-ref: 3.1
+- name: watchdog-ctrl
+  morph: strata/openbmc/watchdog-ctrl.morph
+  repo: https://github.com/facebook/openbmc.git
+  ref: 2a51b7c1c2165ddb188c511e192b75f0aa0fbead
+  unpetrify-ref: master
+- name: bottle
+  repo: upstream:bottle
+  ref: ac2170b9b49b4e27b2e2fb6c05880b7a453c60cb
+  unpetrify-ref: 0.12.7
+- name: iproute2
+  morph: strata/networking-utils/iproute2.morph
+  repo: upstream:iproute2
+  ref: dc9282db9372021b58793c27235251fc69c62ea0
+  unpetrify-ref: 3.5.1
+- name: lm_sensors
+  morph: strata/openbmc/lm_sensors.morph
+  repo: upstream:lm-sensors
+  ref: d9983967a89382f64c65db67026f85f073ef9b74
+  unpetrify-ref: master
+- name: isc-dhcp
+  repo: upstream:isc-dhcp
+  morph: strata/openbmc/isc-dhcp.morph
+  ref: 1b245c913a93296cd6924d81cf7f876f874b080c
+  unpetrify-ref: master
