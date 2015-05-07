@@ -1,0 +1,12 @@
+name: ipmid
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/ipmid/files && make
+install-commands:
+- install -d $DESTDIR/usr/local/fbpackages/ipmid
+- install -d $DESTDIR/usr/local/bin
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/ipmid/files/ipmid $DESTDIR/usr/local/fbpackages/ipmid/ipmid
+- ln -snf $DESTDIR/usr/local/fbpackages/ipmid/ipmid $DESTDIR/usr/local/bin/ipmid
+- install -d $DESTDIR/etc/init.d
+- install -d $DESTDIR/etc/rcS.d
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/ipmid/files/setup-ipmid.sh $DESTDIR/etc/init.d/setup-ipmid.sh

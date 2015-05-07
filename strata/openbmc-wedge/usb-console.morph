@@ -1,0 +1,8 @@
+name: usb-console
+kind: chunk
+install-commands:
+- install -d $DESTDIR/etc/init.d
+- install -d $DESTDIR/etc/rcS.d
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/usb-console/files/usbcons.sh $DESTDIR/etc/init.d/usbcons.sh
+- install -d $DESTDIR/usr/local/bin
+- install -m 755 meta-facebook/meta-wedge/recipes-wedge/usb-console/files/usbmon.sh $DESTDIR/usr/local/bin/usbmon.sh

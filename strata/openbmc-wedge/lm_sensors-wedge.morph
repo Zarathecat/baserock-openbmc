@@ -1,0 +1,6 @@
+name: lm_sensors-wedge
+kind: chunk
+install-commands:
+- install -d $DESTDIR/etc/sensors.d
+- install -m 644 meta-facebook/meta-wedge/recipes-wedge/lm_sensors/files/wedge.conf $DESTDIR/etc/sensors.d/wedge.conf
+#This seems to add extra wedge configuration to the lm_sensors stuff inherited from the openembedded repo. We will probably need that stuff later.

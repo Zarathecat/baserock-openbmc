@@ -1,0 +1,9 @@
+name: alert_control
+kind: chunk
+build-commands:
+- cd meta-facebook/meta-wedge/recipes-wedge/fblibs/files/alert_control && make
+install-commands:
+- install -d $DESTDIR/usr/lib
+- install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fblibs/files/alert_control/libalert_control.so $DESTDIR/usr/lib/libalert_control.so
+- install -d $DESTDIR/usr/include/facebook
+- install -m 0644 meta-facebook/meta-wedge/recipes-wedge/fblibs/files/alert_control/alert_control.h $DESTDIR/usr/include/facebook/alert_control.h
