@@ -9,8 +9,8 @@ strata:
   - build-essential-minimal
 - name: bsp-x86_64-generic
   morph: strata/bsp-x86_64-generic.morph
-- name: coreutils-common
-  morph: strata/coreutils-common.morph
+- name: core
+  morph: strata/core.morph
 - name: python-core
   morph: strata/python-core.morph
 - name: python-common
