@@ -1,0 +1,32 @@
+name: openbmc-system
+kind: system
+description: OpenBMC test system
+arch: x86_64
+strata:
+- name: build-essential
+  morph: strata/build-essential.morph
+  artifacts:
+  - build-essential-minimal
+- name: bsp-armv5l-openbmc-aspeed
+  morph: strata/bsp-armv5l-openbmc-aspeed.morph
+  artifacts:
+  - bsp-armv5l-openbmc-aspeed-runtime
+- name: python-core
+  morph: strata/python-core.morph
+- name: python-common
+  morph: strata/python-common.morph
+- name: python-wsgi
+  morph: strata/python-wsgi.morph
+- name: ntpd
+  morph: strata/ntpd.morph
+- name: networking-utils
+  morph: strata/networking-utils.morph
+- name: openbmc
+  morph: strata/openbmc.morph
+configuration-extensions:
+- set-hostname
+- simple-network
+- nfsboot
+- install-files
+- busybox-init
+- install-essential-files
