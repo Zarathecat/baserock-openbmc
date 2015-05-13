@@ -7,10 +7,10 @@ strata:
   morph: strata/build-essential.morph
   artifacts:
   - build-essential-minimal
-- name: bsp-armv5l-openbmc-aspeed
-  morph: strata/bsp-armv5l-openbmc-aspeed.morph
-  artifacts:
-  - bsp-armv5l-openbmc-aspeed-runtime
+- name: bsp-x86_64-generic
+  morph: strata/bsp-x86_64-generic.morph
+- name: coreutils-common
+  morph: strata/coreutils-common.morph
 - name: python-core
   morph: strata/python-core.morph
 - name: python-common
